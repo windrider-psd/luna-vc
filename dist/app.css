@@ -37,8 +37,47 @@
 }
 
 .loading-container {
-    @apply w-full fixed top-0 h-full z-[9999] bg-black/80 flex flex-col items-center justify-center
+    @apply w-full fixed top-0 h-full z-[9999] bg-black/80 flex flex-col items-center justify-center text-white
 }
 .loading-minor {
     @apply p-4 bg-black w-fit rounded-2xl
+}
+
+
+
+
+.modal-instance-container{
+    @apply w-full fixed h-full z-[999] scroll-auto md:w-1/2 md:h-auto md:top-[25%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:rounded-lg;
+    background-color: #1b1b1f !important;
+}
+
+.modal-instance-container header{
+
+    @apply flex items-center justify-between py-3 relative text-white h-[48px];
+    background: linear-gradient(
+      90deg,
+      rgba(238, 61, 35, 255) 100%,
+      rgba(249, 163, 26, 255) 100%
+    );
+}
+
+.modal-title-container{
+    @apply top-0 w-full text-center h-full flex flex-col items-start justify-center pointer-events-none pl-4;
+    @apply text-xl font-bold;
+} 
+
+.modal-tooltip-container{
+    @apply pr-4 flex flex-row gap-2
+}
+
+.modal-tooltip-container button{
+    @apply cursor-pointer
+}
+
+.modal-tooltip-button{
+    @pply block focus:outline-none mr-4
+}
+
+.modal-body{
+    @apply h-[calc(100%-48px)] overflow-scroll relative p-4
 }

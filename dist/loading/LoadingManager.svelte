@@ -11,6 +11,7 @@
 
     export function OpenLoading<T>(title:string, promise:Promise<T> | Promise<T>[]): Promise<T> {
         return new Promise((resolve, reject) => {
+            console.log("OpenLoading", title, document.getElementById("app"))
             const loading = mount(LoadingInstance, {
                 target: document.getElementById("app")!,
                 props: {
