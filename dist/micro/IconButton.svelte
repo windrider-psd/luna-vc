@@ -42,7 +42,7 @@
 </script>
 
 <button
-  class="btn btn-{props.color} icon-bt"
+  class="btn btn-{props.color} icon-btn"
   class:w-full={props.fullWidth}
   {onclick}
   type="button"
