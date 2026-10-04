@@ -15,7 +15,7 @@
     text: string;
     icon: IconDefinition;
     color?: ButtonColor;
-    handle?: (data?: any) => any;
+    onclick?: (data?: any) => any;
     data?: any;
     fullWidth?: boolean;
     disabledState?: boolean;
@@ -27,7 +27,7 @@
   let { data = $bindable(), ...props }: IconButtonProps = $props();
   let disabled = $state(false);
   async function onclick() {
-    const result = props.handle?.(data);
+    const result = props.onclick?.(data);
 
     if (result instanceof Promise) {
       disabled = true;
@@ -42,7 +42,7 @@
 </script>
 
 <button
-  class="btn btn-{props.color} icon-btn"
+  class="btn btn-{props.color} icon-bt"
   class:w-full={props.fullWidth}
   {onclick}
   type="button"

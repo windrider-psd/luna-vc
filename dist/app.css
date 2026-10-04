@@ -35,3 +35,10 @@
 .btn-align {
     @apply flex flex-row justify-center items-center gap-4;
 }
+
+.loading-container {
+    @apply w-full fixed top-0 h-full z-[9999] bg-black/80 flex flex-col items-center justify-center
+}
+.loading-minor {
+    @apply p-4 bg-black w-fit rounded-2xl
+}

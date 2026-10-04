@@ -4,7 +4,7 @@ export type IconButtonProps = {
     text: string;
     icon: IconDefinition;
     color?: ButtonColor;
-    handle?: (data?: any) => any;
+    onclick?: (data?: any) => any;
     data?: any;
     fullWidth?: boolean;
     disabledState?: boolean;
