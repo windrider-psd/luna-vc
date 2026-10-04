@@ -43,12 +43,15 @@
     @apply p-4 bg-black w-fit rounded-2xl
 }
 
-.modal-container{
-    @apply w-full fixed h-full z-[999] scroll-auto;
+
+
+
+.modal-instance-container{
+    @apply w-full fixed h-full z-[999] scroll-auto md:w-1/2 md:h-auto md:top-[25%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:rounded-lg;
     background-color: #1b1b1f !important;
 }
 
-.modal-container header{
+.modal-instance-container header{
 
     @apply flex items-center justify-between py-3 relative text-white h-[48px];
     background: linear-gradient(

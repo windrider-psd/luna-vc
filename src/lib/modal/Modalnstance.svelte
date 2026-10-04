@@ -32,7 +32,7 @@
 </script>
 
 <div
-  class="modal-container"
+  class="modal-instance-container"
   style="transition: all 0.2s"
   class:top-0={trans}
   class:top-[100vh]={!trans}
