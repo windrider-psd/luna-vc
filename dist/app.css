@@ -1,40 +1,39 @@
 @import "tailwindcss";
-@layer components {
-  .btn {
-    @apply px-4 py-2 rounded font-medium transition-colors disabled:cursor-not-allowed;
-  }
 
-  .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700
-           disabled:bg-blue-300 disabled:text-blue-100;
-  }
+.btn {
+@apply px-4 py-2 rounded font-medium transition-colors disabled:cursor-not-allowed;
+}
 
-  .btn-secondary {
-    @apply bg-white border border-gray-300 text-gray-700 hover:bg-gray-100
-           disabled:bg-gray-200 disabled:text-gray-400 disabled:border-gray-200;
-  }
+.btn-primary {
+@apply bg-blue-600 text-white hover:bg-blue-700
+        disabled:bg-blue-300 disabled:text-blue-100;
+}
 
-  .btn-danger {
-    @apply bg-red-600 text-white hover:bg-red-700
-           disabled:bg-red-300 disabled:text-red-100;
-  }
+.btn-secondary {
+@apply bg-white border border-gray-300 text-gray-700 hover:bg-gray-100
+        disabled:bg-gray-200 disabled:text-gray-400 disabled:border-gray-200;
+}
 
-  .btn-success {
-    @apply bg-green-600 text-white hover:bg-green-700
-           disabled:bg-green-300 disabled:text-green-100;
-  }
+.btn-danger {
+@apply bg-red-600 text-white hover:bg-red-700
+        disabled:bg-red-300 disabled:text-red-100;
+}
 
-  .btn-dark {
-    @apply bg-gray-800 text-white hover:bg-gray-900
-           disabled:bg-gray-500 disabled:text-gray-300;
-  }
+.btn-success {
+@apply bg-green-600 text-white hover:bg-green-700
+        disabled:bg-green-300 disabled:text-green-100;
+}
 
-  .btn-gray {
-    @apply bg-gray-200 hover:bg-gray-300 text-gray-800
-           disabled:bg-gray-100 disabled:text-gray-400;
-  }
+.btn-dark {
+@apply bg-gray-800 text-white hover:bg-gray-900
+        disabled:bg-gray-500 disabled:text-gray-300;
+}
 
-  .btn-align {
-    @apply flex flex-row justify-center items-center gap-4;
-  }
+.btn-gray {
+@apply bg-gray-200 hover:bg-gray-300 text-gray-800
+        disabled:bg-gray-100 disabled:text-gray-400;
+}
+
+.btn-align {
+@apply flex flex-row justify-center items-center gap-4;
 }
