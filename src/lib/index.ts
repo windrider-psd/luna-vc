@@ -6,3 +6,6 @@ export { default as LoadingCircle } from "./micro/LoadingCircle.svelte";
 export { default as LoadingInstance } from "./loading/LoadingInstance.svelte";
 export { default as LoadingManager } from "./loading/LoadingManager.svelte";
 export { OpenLoading } from "./loading/LoadingManager.svelte";
+
+export {default as ModalManager} from "./modal/ModalManager.svelte";
+export {OpenSnippetModal, OpenComponentModal, PopModal, CloseAllModals} from "./modal/ModalManager.svelte";
