@@ -1,7 +1,7 @@
 # Installing
 
 ```
-npm i github:windrider-psd/luna-vc svelte-fa @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+npm i github:windrider-psd/luna-vc svelte-fa @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons svelte-select
 ```
 
 # Svelte library
