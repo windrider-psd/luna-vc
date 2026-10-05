@@ -1,3 +1,9 @@
+# Installing
+
+```
+npm i github:windrider-psd/luna-vc svelte-fa @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+```
+
 # Svelte library
 
 Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
