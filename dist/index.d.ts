@@ -6,3 +6,5 @@ export { default as LoadingManager } from "./loading/LoadingManager.svelte";
 export { OpenLoading } from "./loading/LoadingManager.svelte";
 export { default as ModalManager } from "./modal/ModalManager.svelte";
 export { OpenSnippetModal, OpenComponentModal, PopModal, CloseAllModals } from "./modal/ModalManager.svelte";
+export { default as PromptDialogManager } from "./prompt-dialog/PromptDialogManager.svelte";
+export { OpenAlert, OpenConfirmationDialog, OpenDialog } from "./prompt-dialog/PromptDialogManager.svelte";
