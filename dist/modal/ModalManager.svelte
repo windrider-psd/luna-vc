@@ -82,20 +82,26 @@
     });
   }
 
-  export function OpenSnippetModal<T = any>(
+
+  type CreateSnippetModalArgs = {
     title: string,
     snippet: Snippet<[any]>,
-    ...props: any
-  ): Promise<ModalResult<T>> {
-    return CreateModalData(title, undefined, snippet, props);
+    props?: any
   }
 
-  export function OpenComponentModal<T = any>(
+  export function OpenSnippetModal<T = any>(args: CreateSnippetModalArgs): Promise<ModalResult<T>> {
+    let props = args.props ?? {}
+
+    return CreateModalData(args.title, undefined, args.snippet, props);
+  }
+  type CreateComponentModalArgs = {
     title: string,
     component: Component<any>,
-    props: any = {}
-  ): Promise<ModalResult<T>> {
-    return CreateModalData(title, component, undefined, props);
+    props?: any
+  }
+  export function OpenComponentModal<T = any>(args: CreateComponentModalArgs): Promise<ModalResult<T>> {
+    let props = args.props ?? {}
+    return CreateModalData(args.title, args.component, undefined, props);
   }
 
   export function PopModal() {

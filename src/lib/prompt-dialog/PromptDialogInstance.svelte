@@ -14,11 +14,16 @@
 </script>
 
 <script lang="ts">
+    import { onMount } from "svelte";
+
   type Props = {
     text: string;
     buttons: PromptButton[];
     onHandle?: (i: number) => any;
   };
+
+
+  let buttons: HTMLButtonElement[] = [];
 
   let props: Props = $props();
 
@@ -26,6 +31,10 @@
     button.handle?.();
     props.onHandle?.(props.buttons.indexOf(button));
   }
+
+  onMount(()=>{
+    buttons[0].focus()
+  })
 </script>
 
 <div
@@ -36,8 +45,9 @@
       {props.text}
     </h2>
     <div class="prompt-buttons">
-      {#each props.buttons as button}
+      {#each props.buttons as button, i}
         <button
+          bind:this={buttons[i]}
           class="btn-{button.color}"
           data-color={button.color}
           onclick={() => handle(button)}

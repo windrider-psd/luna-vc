@@ -24,8 +24,18 @@ export type ModalData = {
     id: string;
     resolve: (val: ModalResult) => void;
 };
-export declare function OpenSnippetModal<T = any>(title: string, snippet: Snippet<[any]>, ...props: any): Promise<ModalResult<T>>;
-export declare function OpenComponentModal<T = any>(title: string, component: Component<any>, props?: any): Promise<ModalResult<T>>;
+type CreateSnippetModalArgs = {
+    title: string;
+    snippet: Snippet<[any]>;
+    props?: any;
+};
+export declare function OpenSnippetModal<T = any>(args: CreateSnippetModalArgs): Promise<ModalResult<T>>;
+type CreateComponentModalArgs = {
+    title: string;
+    component: Component<any>;
+    props?: any;
+};
+export declare function OpenComponentModal<T = any>(args: CreateComponentModalArgs): Promise<ModalResult<T>>;
 export declare function PopModal(): boolean;
 export declare function CloseAllModals(): void;
 interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {

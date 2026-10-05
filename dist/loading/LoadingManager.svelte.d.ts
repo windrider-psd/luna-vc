@@ -4,7 +4,11 @@ export type LoadingInit = {
     title: string;
 };
 export type LoadingResult = any;
-export declare function OpenLoading<T>(title: string, promise: Promise<T> | Promise<T>[]): Promise<T>;
+type OpenLoadingArgs<T> = {
+    title: string;
+    promise: Promise<T> | Promise<T>[];
+};
+export declare function OpenLoading<T>(args: OpenLoadingArgs<T>): Promise<T>;
 interface $$__sveltets_2_IsomorphicComponent<Props extends Record<string, any> = any, Events extends Record<string, any> = any, Slots extends Record<string, any> = any, Exports = {}, Bindings = string> {
     new (options: import('svelte').ComponentConstructorOptions<Props>): import('svelte').SvelteComponent<Props, Events, Slots> & {
         $$bindings?: Bindings;

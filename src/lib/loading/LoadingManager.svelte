@@ -8,16 +8,19 @@
         title:string
     };
     export type LoadingResult = any
-
-    export function OpenLoading<T>(title:string, promise:Promise<T> | Promise<T>[]): Promise<T> {
+    type OpenLoadingArgs<T> ={
+        title:string,
+        promise:Promise<T> | Promise<T>[]
+    }
+    export function OpenLoading<T>(args: OpenLoadingArgs<T>): Promise<T> {
         return new Promise((resolve, reject) => {
-            console.log("OpenLoading", title, document.getElementById("app"))
+            let container = document.getElementById("app") ?? document.querySelector("body")
             const loading = mount(LoadingInstance, {
-                target: document.getElementById("app")!,
+                target: container!,
                 props: {
                     loadingInit: {
-                        title,
-                        promise: Array.isArray(promise) ? promise : [promise],
+                        title:args.title,
+                        promise: Array.isArray(args.promise) ? args.promise : [args.promise],
                         close: (result: any, success:boolean) => {
                             unmount(loading);
                             success ? resolve(result) : reject(result)                

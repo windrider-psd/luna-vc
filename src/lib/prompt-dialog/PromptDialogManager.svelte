@@ -16,8 +16,9 @@
     }
     export function OpenDialog(args:OpenDialogArgs): Promise<number> {
         return new Promise((resolve) => {
+            let container = document.getElementById("app") ?? document.querySelector("body")
             const instance = mount(PromptDialogInstance, {
-                target: document.getElementById("app")!,
+                target: container!,
                 props: {
                     buttons:args.buttons,
                     text:args.text,
