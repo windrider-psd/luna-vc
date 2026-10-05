@@ -48,26 +48,3 @@
     </div>
   </div>
 </div>
-
-<style lang="postcss">
-  @reference "tailwindcss";
-
-  button {
-    @apply px-4 py-2 w-full;
-  }
-  .prompt-container{
-    @apply fixed inset-0 flex items-center justify-center bg-black/80 z-[9999];
-  }
-  .prompt-dialog{
-    @apply bg-white rounded-2xl shadow-lg max-w-sm w-full;
-  }
-  .prompt-dialog h2{
-    @apply text-lg font-semibold text-gray-800 p-6 text-center;
-  }
-  .prompt-dialog > div{
-    @apply flex justify-end;
-  }
-  .prompt-buttons{
-    @apply flex justify-end;
-  }
-</style>
