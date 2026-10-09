@@ -35,6 +35,7 @@
   {required}
   {disabled}
   data-range="{type=="range" ? 1 : 0}"
+  class="standard-input-box"
   onchange={(e) => {
     //@ts-ignore
     onchange?.(e.target.value!)
