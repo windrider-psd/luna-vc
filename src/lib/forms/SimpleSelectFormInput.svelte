@@ -25,7 +25,7 @@
   <select
     {id}
     bind:value
-    class="standard-input-box shadow"
+    class="standard-input-box"
     {required}
     onchange={(e) => {
       //@ts-ignore
